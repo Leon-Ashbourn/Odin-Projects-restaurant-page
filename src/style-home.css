@@ -1,0 +1,137 @@
+
+@font-face {
+    font-family: restaurant-name;
+    src: url('./fonts/Pirata_One/PirataOne-Regular.ttf');
+}
+@font-face {
+    font-family: paragraphs;
+    src: url('./fonts/Maname/Maname-Regular.ttf');
+}
+@font-face {
+    font-family: navbar-button;
+    src: url('./fonts/New_Amsterdam/NewAmsterdam-Regular.ttf');
+}
+@font-face {
+    font-family: sub-headings;
+    src: url('./fonts/Matemasie/Matemasie-Regular.ttf');
+}
+
+:root {
+    --background-black : #262626;
+    --background-dark-black: #020617;
+    --blur-radius: blur(0.3rem);
+    --background-grey: #1f2937;
+}
+* {
+    margin-bottom: 20px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    margin: 0;
+}
+*,
+ ::after,
+  ::before {
+    box-sizing: border-box;
+}
+
+/* header styling */
+
+header {
+    text-align: center;
+}
+header > div:first-child {
+    font-family: restaurant-name,'brush sript m7', sans-serif;
+    font-size: 4rem;
+    color: white;
+    background: var(--background-grey);
+    border-radius: 8px;
+    padding: 20px 0px;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 4vw;
+    background-color: var(--background-dark-black);
+    padding: 10px;
+    box-shadow: 0px 5px 20px black;
+    backdrop-filter: blur(60%);
+}
+nav> button {
+    font-size: 2rem;
+    font-family: navbar-button;
+    color: white;
+    background: var(--background-dark-black);
+    margin-bottom: 0;
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+/* content box styling*/
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    margin: 20px auto;
+    background-color: var(--background-black);
+    color: white;
+    padding: 10vw;
+    border-radius: 18px;
+    backdrop-filter: blur(60%);
+    box-shadow: 0px 0px 20px black;
+}
+#content > div:first-child {
+    font-family: sub-headings;
+    line-height: 1.3rem;
+    font-size: clamp(1.2rem, 2.2vw, 1.7rem)
+}
+#content > img{
+    max-height: 250px;
+    max-width: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+}
+#content p:first-child{
+    color: red;
+    font-family: navbar-button;
+}
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    background-color: var(--background-grey);
+    font-family: paragraph;
+    font-weight: 600;
+    color: white;
+    padding: 20px;
+    margin: 0px;
+    backdrop-filter: blur(60%);
+}
+footer > * {
+    margin-bottom: 0;
+}
+
+/* overall background image */
+
+#fixed-image {
+    margin: 0;
+    background-image: url('./home-background.jpg');
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-color: rgb(0 0 0 /0.7);
+}
+#fixed-image > *{
+    z-index: 0;
+}
