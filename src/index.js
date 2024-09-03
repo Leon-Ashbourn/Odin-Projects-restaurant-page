@@ -1,10 +1,10 @@
 import foodImage from './food-pic01.jpg';
 import './style-home.css';
 
+import {aboutContent} from './about.js';
+import {menuContent} from './menu.js';
 
-import {mainContent} from './menu.js';
-
-const mianContent = (function(){
+const mainContent = (function(){
     const restaurantContent = document.querySelector('#content');
 
     const mainPage = ()=>{
@@ -22,6 +22,17 @@ const mianContent = (function(){
     const homeBtn = document.querySelector('.home-page');
     const menuBtn = document.querySelector('.menu-page');
     const aboutBtn = document.querySelector('.about-page');
+
+    homeBtn.addEventListener('click', ()=>{
+        mainPage();
+    })
+    menuBtn.addEventListener('click', ()=>{
+        menuContent();
+    })
+
+    aboutBtn.addEventListener('click', ()=>{
+        aboutContent();
+    })
 
     addEventListener('load', ()=>{
         mainPage();
