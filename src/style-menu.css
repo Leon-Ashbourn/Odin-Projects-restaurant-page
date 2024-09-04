@@ -1,3 +1,29 @@
+@font-face{
+    font-family: heading;
+    src:url('./fonts/New_Amsterdam/NewAmsterdam-Regular.ttf');
+}
+@font-face {
+    font-family: paragraphs;
+    src: url('./fonts/Maname/Maname-Regular.ttf');
+}
+@font-face {
+    font-family: title;
+    src: url('./fonts/Matemasie/Matemasie-Regular.ttf');
+}
+@font-face {
+    font-family: price;
+    src: url('./fonts/Pirata_One/PirataOne-Regular.ttf');
+}
+
+
+:root {
+    --background-black : #262626;
+    --background-dark-black: #0a0a0a;
+    --blur-radius: blur(0.3rem);
+    --background-grey: #1f2937;
+    --background-color-zinc: #3f3f46;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -7,4 +33,75 @@ body {
  ::after,
   ::before {
     box-sizing: border-box;
+}
+
+
+/* menu title*/
+#content > div:first-child {
+    width: 100%;
+    text-align: center;
+    font-size: 1.8rem;
+    border: 2px solid white;
+    background-color: var(--background-dark-black);
+    border-radius: 18px;
+    padding: 20px 20px;
+    line-height: 2rem;
+    box-shadow: 0px 6px 10px white;
+    margin-bottom: 3rem;
+    font-family: title;
+}
+
+/* menu list*/
+
+#content>div:last-child {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, clamp(220px, 40%, 3000px));
+    row-gap: 7vh;
+    justify-content: space-around;
+}
+
+/* each list item*/
+#content > div>div {
+    width: 100%;
+    height: 100%;
+    border: 3px solid white;
+    padding: 3vw;
+    background-color: var(--background-grey);
+    border-radius: 18px;
+    box-shadow: 0px 10px 20px black;
+}
+
+/* item name*/
+.food-item>div:first-child {
+    font-family: heading;
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-align: center;
+    border-bottom: 2px solid white;
+    padding: 10px 0px;
+}
+
+/* item info */
+#content .food-item >p{
+    font-family: paragraphs;
+    font-weight: 400;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* item price*/
+
+#content .food-item >div:last-child {
+    font-family: price;
+    font-size: 1.3rem;
+    text-align: right;
+    font-weight: 500;
+    margin: 3rem 0 0 auto;
+}
+
+/* sligh hover effects*/
+
+#content .food-item:hover {
+    background-color: var(--background-color-zinc);
+    box-shadow: 0px 10px 15px white;
 }

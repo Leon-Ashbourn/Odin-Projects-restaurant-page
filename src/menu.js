@@ -1,8 +1,14 @@
-import './style-menu.css';
+import styles from './style-menu.css';
 
 
 function menuContent(){
     const mainContent = document.querySelector('#content');
+    mainContent.textContent = '';
+    const menuTitle = document.createElement('div');
+    const menuList = document.createElement('div');
+
+    menuTitle.textContent = `Debugging Your Dinner Choices`;
+
     const foodItem1 = document.createElement('div');
     const foodItem2 = document.createElement('div');
     const foodItem3 = document.createElement('div');
@@ -35,7 +41,7 @@ function menuContent(){
     foodName1.textContent = 'HTML Hamburger';
     foodName2.textContent = `CSS Salad`;
     foodName3.textContent = `JavaScript Jambalaya`;
-    foodName4.textcontent = `Git Burger`;
+    foodName4.textContent = `Git Burger`;
     foodName5.textContent = `Ruby on Rails Ravioli`;
     foodName6.textContent = `React Ramen`;
 
@@ -53,6 +59,12 @@ function menuContent(){
     foodPrice5.textContent = `$10.10: “Stew-riffic Deal”`;
     foodPrice6.textContent = `$6.66: “Endless Temptation”`;
 
+    foodItem1.classList.add('food-item');
+    foodItem2.classList.add('food-item');
+    foodItem3.classList.add('food-item');
+    foodItem4.classList.add('food-item');
+    foodItem5.classList.add('food-item');
+    foodItem6.classList.add('food-item');
 
     foodItem1.append(foodName1, foodInfo1, foodPrice1);
     foodItem2.append(foodName2, foodInfo2, foodPrice2);
@@ -62,7 +74,8 @@ function menuContent(){
     foodItem6.append(foodName6, foodInfo6, foodPrice6);
 
 
-    mainContent.append(foodItem1, foodItem2, foodItem3, foodItem4, foodItem5, foodItem6);
+    menuList.append(menuTitle, foodItem1, foodItem2, foodItem3, foodItem4, foodItem5, foodItem6);
+    mainContent.append(menuTitle, menuList);
 }
 
 

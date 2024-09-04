@@ -21,6 +21,7 @@
     --background-dark-black: #020617;
     --blur-radius: blur(0.3rem);
     --background-grey: #1f2937;
+    --navbar-border: #b91c1c;
 }
 * {
     margin-bottom: 20px;
@@ -49,11 +50,14 @@ header {
 }
 header > div:first-child {
     font-family: restaurant-name,'brush sript m7', sans-serif;
-    font-size: 4rem;
+    font-size: 6rem;
     color: white;
-    background: var(--background-grey);
-    border-radius: 8px;
+    background: #102059;
+    border-radius: 18px;
     padding: 20px 0px;
+    text-shadow: 0px 8px #6d28d9;       
+    border: 8px solid var(--background-grey);
+    box-shadow: 0px 8px 30px 10px var(--background-dark-black);
 }
 nav {
     display: flex;
@@ -61,7 +65,7 @@ nav {
     justify-content:center;
     gap: 4vw;
     background-color: var(--background-dark-black);
-    padding: 10px;
+    padding: 15px;
     box-shadow: 0px 5px 20px black;
     backdrop-filter: blur(60%);
 }
@@ -73,6 +77,7 @@ nav> button {
     margin-bottom: 0;
     border: none;
     border-bottom: 1px solid white;
+    padding: 7px;
 }
 
 /* content box styling*/
@@ -92,8 +97,8 @@ nav> button {
 }
 #content > div:first-child {
     font-family: sub-headings;
-    line-height: 1.3rem;
-    font-size: clamp(1.2rem, 2.2vw, 1.7rem)
+    font-size: clamp(1.5rem, 2.2vw, 1.8rem);
+    line-height: 1.6rem;
 }
 #content > img{
     max-height: 250px;
@@ -102,9 +107,12 @@ nav> button {
     object-fit: cover;
     border: 5px solid white;
 }
-#content p:first-child{
-    color: red;
+#content p:nth-of-type(1){
     font-family: navbar-button;
+    font-size: 1.3rem;
+}
+#content p:last-child {
+    font-family: paragraphs;
 }
 footer {
     display: flex;
@@ -132,6 +140,12 @@ footer > * {
     background-size: 100% 100%;
     background-color: rgb(0 0 0 /0.7);
 }
-#fixed-image > *{
-    z-index: 0;
+
+
+
+/* nav buttons styling*/
+
+nav >*:hover {
+    padding-top: 0px;
+    padding-bottom: 14px;
 }
